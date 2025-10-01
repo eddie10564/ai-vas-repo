@@ -3,6 +3,12 @@
     email {$LETSENCRYPT_EMAIL}
 }
 
+# Root domain - serve static files
+ai-vas.com {
+    root * /srv/website
+    file_server
+}
+
 # N8N
 {$N8N_HOSTNAME} {
     # For domains, Caddy will automatically use Let's Encrypt
