@@ -397,7 +397,7 @@ services:
     depends_on:
      - ollama-gpu-amd
 
-crawl4ai:
+  crawl4ai:
     container_name: crawl4ai
     image: 'unclecode/crawl4ai:latest'
     restart: unless-stopped
