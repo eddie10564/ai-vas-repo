@@ -397,8 +397,9 @@ services:
     depends_on:
      - ollama-gpu-amd
 
-  crawl4ai:
-    ports:
-      - '11235:11235'
+crawl4ai:
     container_name: crawl4ai
     image: 'unclecode/crawl4ai:latest'
+    restart: unless-stopped
+    expose:
+      - 11235/tcp
